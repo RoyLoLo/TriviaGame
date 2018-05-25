@@ -1,0 +1,52 @@
+body{
+    background-image:url("../images/Cherry_blossom_background.gif")
+}
+
+
+#side{
+    background-image: url(../images/balcony-8bit.gif);
+    opacity: .85;
+}
+
+#question{
+    background-color:aliceblue;
+    color: crimson;
+    height: 200px;
+    opacity: .85;
+}
+#answers{
+    background-color: cornflowerblue;
+    height: 300px;
+    opacity: .85;
+    
+}
+
+#start{
+    height:100%;
+    width: 100%;
+    background-color:darkgrey ;
+    color: darkgreen;
+    margin-top:3px;
+    
+}
+
+#reset{
+    
+    height:100%;
+    width: 100%;
+    background-color: darkgrey;
+    color:red;
+    margin-top: 3px;
+    
+}
+
+#correct{
+    font-size: 32px;
+}
+
+#incorrect{
+    font-size: 32px;
+}
+#timer{
+    font-size: 64px;
+}
