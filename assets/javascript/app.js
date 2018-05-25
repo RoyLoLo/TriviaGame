@@ -80,7 +80,9 @@ function timeConvert(time){
         return min + ":" + sec;
 }
 function reset(){
+    intervalID = 0;
     time = 10;
+    running = false;
     $("#timer").text("00:10");
 }
 // end of timer functions
@@ -92,13 +94,12 @@ var randqnumb = Math.floor(Math.random()*3);
 $("#question").text(questbank[randqnumb].question);
 
 var randanumb = Math.floor(Math.random()*4);
-var akey = 0;
+
 if (randanumb === 0){
     $("#a1").text(questbank[randqnumb].incorrect_answers[0]);
     $("#a2").text(questbank[randqnumb].correct_answer);
     $("#a3").text(questbank[randqnumb].incorrect_answers[1]);
     $("#a4").text(questbank[randqnumb].incorrect_answers[2]);
-    akey = 2;
     $("#a1").on("click", wrong);
     $("#a2").on("click", right);
     $("#a3").on("click", wrong);
@@ -109,7 +110,6 @@ else if (randanumb ===1){
     $("#a3").text(questbank[randqnumb].correct_answer);
     $("#a4").text(questbank[randqnumb].incorrect_answers[1]);
     $("#a1").text(questbank[randqnumb].incorrect_answers[2]);
-    akey = 3;
     $("#a1").on("click", wrong);
     $("#a2").on("click", wrong);
     $("#a3").on("click", right);
@@ -120,7 +120,6 @@ else if (randanumb ===2){
     $("#a4").text(questbank[randqnumb].correct_answer);
     $("#a1").text(questbank[randqnumb].incorrect_answers[1]);
     $("#a1").text(questbank[randqnumb].incorrect_answers[2]);
-    akey = 4
     $("#a1").on("click", wrong);
     $("#a2").on("click", wrong);
     $("#a3").on("click", wrong);
@@ -131,7 +130,7 @@ else if (randanumb ===3){
     $("#a1").text(questbank[randqnumb].correct_answer);
     $("#a2").text(questbank[randqnumb].incorrect_answers[1]);
     $("#a3").text(questbank[randqnumb].incorrect_answers[2]);
-    akey = 1;
+
     $("#a1").on("click", right);
     $("#a2").on("click", wrong);
     $("#a3").on("click", wrong);

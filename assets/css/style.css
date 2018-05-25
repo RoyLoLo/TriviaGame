@@ -6,6 +6,7 @@ body{
 #side{
     background-image: url(../images/balcony-8bit.gif);
     opacity: .85;
+    
 }
 
 #question{
@@ -49,4 +50,15 @@ body{
 }
 #timer{
     font-size: 64px;
+}
+
+#startbtn{
+    background-color: lemonchiffon;
+    width: 80%;
+    font-size:50px;
+    color:green;
+    outline: 0;
+    border: 0;
+   
+    
 }
